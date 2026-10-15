@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.cache/
+.ipynb_checkpoints/
+graphify-out/
+.env
+
+# полные данные кейса не коммитим, только сэмпл
+data/*
+!data/sample/
+
+# результаты на реальных данных кейса не публикуем
+results/*.csv

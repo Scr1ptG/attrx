@@ -1,0 +1,8 @@
+{"id": "s1", "category": "smartphone", "title": "Смартфон Samsung Galaxy S24 Ultra 12/256 ГБ черный", "description": "Экран 6,8\" Dynamic AMOLED 2X, аккумулятор 5000 мАч, титановый корпус.", "seller_attrs": {"Бренд": "Samsung", "Цвет": "Titanium Black"}}
+{"id": "s2", "category": "smartphone", "title": "Apple iPhone 15 128GB Blue", "description": "Дисплей Super Retina XDR 6.1 дюйма. Ёмкость аккумулятора 3349 мА·ч.", "seller_attrs": {}}
+{"id": "s3", "category": "smartphone", "title": "Смартфон Xiaomi Redmi Note 13 8+256GB, синий", "description": "Батарея 5000mAh, экран 6.67\" AMOLED 120 Гц.", "seller_attrs": {"Встроенная память": "128 ГБ", "Производитель": "Xiaomi"}}
+{"id": "s4", "title": "Смартфон HONOR X8b", "description": "Тонкий корпус и отличная камера на 108 Мп.", "seller_attrs": {"Цвет": "Полночный черный"}}
+{"id": "s5", "category": "laptop", "title": "Ноутбук ASUS Vivobook 15 X1504ZA-BQ1143 15.6\" Intel Core i5-1235U 16/512 ГБ серебристый", "description": "", "seller_attrs": {"Процессор": "Intel Core i5 1235U"}}
+{"id": "s6", "category": "laptop", "title": "Ноутбук Lenovo IdeaPad Slim 3 15AMN8", "description": "Процессор AMD Ryzen 5 7520U, 8 ГБ ОЗУ, SSD 512 ГБ, экран 15,6 дюйма, цвет — серый.", "seller_attrs": {}}
+{"id": "s7", "category": "laptop", "title": "Ноутбук Apple MacBook Air 13 M2 8/256GB Midnight", "description": "Чип Apple M2, дисплей Liquid Retina 13,6 дюйма.", "seller_attrs": {"Процессор": "Apple M2"}}
+{"id": "s8", "title": "Наушники Sony WH-1000XM5 черные", "description": "Беспроводные наушники с шумоподавлением.", "seller_attrs": {}}

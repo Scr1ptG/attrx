@@ -1,0 +1,17 @@
+{
+  "config": "patterns+analogs+similar",
+  "cards": 1398,
+  "cards_unknown_category": 0,
+  "cards_with_predictions": 1398,
+  "predictions": 56500,
+  "status": {
+    "accept": 3893,
+    "reject": 4367,
+    "review": 48240
+  },
+  "accept_threshold": 0.8912,
+  "seconds": 42.03,
+  "ms_per_card": 30.06,
+  "llm_config": null,
+  "llm": null
+}

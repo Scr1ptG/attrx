@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "attrx"
+version = "0.1.0"
+description = "Извлечение и нормализация атрибутов товаров из текстовых карточек (кейс М.Видео, хакатон «Точка сборки»)"
+requires-python = ">=3.10"
+dependencies = ["pyyaml>=6.0"]
+
+[project.optional-dependencies]
+llm = ["openai>=1.40"]
+data = ["polars>=1.20", "numpy>=1.26", "scikit-learn>=1.4"]
+demo = ["fastapi>=0.110", "uvicorn>=0.29"]
+local-llm = ["torch>=2.4", "transformers>=4.51", "accelerate>=1.0", "bitsandbytes>=0.45"]
+judge = ["torch>=2.4", "transformers>=5.0", "safetensors>=0.4", "bitsandbytes>=0.45"]
+dev = ["pytest>=8.0", "polars>=1.20", "numpy>=1.26", "scikit-learn>=1.4"]
+
+[project.scripts]
+attrx = "attrx.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+attrx = ["static/*.html"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

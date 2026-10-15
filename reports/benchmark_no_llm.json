@@ -1,0 +1,143 @@
+{
+ "sample": "test_core",
+ "cards": 1398,
+ "rows": [
+  {
+   "config": "1 baseline (словари)",
+   "precision": 0.6794202280720452,
+   "recall": 0.08521360209592044,
+   "f1": 0.15143417067521825,
+   "traffic_weighted_f1": 0.15192506810250614,
+   "recall_supported": 0.530215405246836,
+   "auto_fill": 0.048027054483237984,
+   "precision_accept": 0.6713053158920123,
+   "review_share": 0.07739400096241245,
+   "review_precision": 0.6844559585492228,
+   "ece": 0.20238348893850203,
+   "ms_per_card": 7.680024882413457,
+   "llm_share": 0.0,
+   "twf1_ci": "[0.147; 0.158]"
+  },
+  {
+   "config": "2 + шаблоны",
+   "precision": 0.6911326736478047,
+   "recall": 0.09616104368283163,
+   "f1": 0.16883162600767418,
+   "traffic_weighted_f1": 0.17129415528847508,
+   "recall_supported": 0.5835219176934038,
+   "auto_fill": 0.05448323798321125,
+   "precision_accept": 0.6947988223748773,
+   "review_share": 0.0846521948350532,
+   "review_precision": 0.6887730933207011,
+   "ece": 0.1808178258866877,
+   "ms_per_card": 9.072884128499611,
+   "llm_share": 0.0,
+   "twf1_ci": "[0.166; 0.178]"
+  },
+  {
+   "config": "3 + шаблоны + верификатор",
+   "precision": 0.8090603638048893,
+   "recall": 0.09334064053895097,
+   "f1": 0.16737173879175007,
+   "traffic_weighted_f1": 0.169174636741198,
+   "recall_supported": 0.5660045260246417,
+   "auto_fill": 0.025757899802170775,
+   "precision_accept": 0.9833938764919564,
+   "review_share": 0.08961129230604716,
+   "review_precision": 0.7589498806682577,
+   "ece": 0.06005872869645287,
+   "ms_per_card": 9.360930609259654,
+   "llm_share": 0.0,
+   "twf1_ci": "[0.164; 0.177]"
+  },
+  {
+   "config": "4 + шаблоны + аналоги",
+   "precision": 0.809144406241735,
+   "recall": 0.3271533978506122,
+   "f1": 0.46592423377117836,
+   "traffic_weighted_f1": 0.4785101361507738,
+   "recall_supported": 0.6815857849300142,
+   "auto_fill": 0.06911992728439288,
+   "precision_accept": 0.7992651324695417,
+   "review_share": 0.335200235256376,
+   "review_precision": 0.8111815607927583,
+   "ece": 0.17245984398890804,
+   "ms_per_card": 18.11399105110223,
+   "llm_share": 0.0,
+   "twf1_ci": "[0.462; 0.502]"
+  },
+  {
+   "config": "5 + шаблоны + аналоги + верификатор",
+   "precision": 0.8389211136890952,
+   "recall": 0.38664920066299524,
+   "f1": 0.5293342605131208,
+   "traffic_weighted_f1": 0.5400049846986993,
+   "recall_supported": 0.676305422848043,
+   "auto_fill": 0.05434956958776667,
+   "precision_accept": 0.9697491392031481,
+   "review_share": 0.4065390579051489,
+   "review_precision": 0.821430919971066,
+   "ece": 0.016299813408660487,
+   "ms_per_card": 19.090327241048964,
+   "llm_share": 0.0,
+   "twf1_ci": "[0.526; 0.558]"
+  },
+  {
+   "config": "6 + похожие товары + верификатор",
+   "precision": 0.8303880446492012,
+   "recall": 0.4842672298561728,
+   "f1": 0.6117645072230055,
+   "traffic_weighted_f1": 0.629709366897413,
+   "recall_supported": 0.7003604056659123,
+   "auto_fill": 0.049510773672672835,
+   "precision_accept": 0.9738120950323974,
+   "review_share": 0.5336710688124899,
+   "review_precision": 0.8170820288040075,
+   "ece": 0.010249224543411832,
+   "ms_per_card": 30.17388051842074,
+   "llm_share": 0.0,
+   "twf1_ci": "[0.620; 0.642]"
+  },
+  {
+   "config": "6b то же, аналоги публикуются без проверки",
+   "precision": 0.8303880446492012,
+   "recall": 0.4842672298561728,
+   "f1": 0.6117645072230055,
+   "traffic_weighted_f1": 0.629709366897413,
+   "recall_supported": 0.7003604056659123,
+   "auto_fill": 0.19742822007164626,
+   "precision_accept": 0.943805010155721,
+   "review_share": 0.3857536224135166,
+   "review_precision": 0.7723413839703386,
+   "ece": 0.010249224543413413,
+   "ms_per_card": 31.355293864685407,
+   "llm_share": 0.0,
+   "twf1_ci": null
+  }
+ ],
+ "thresholds": {
+  "patterns": 0.9516483516483516,
+  "patterns+analogs": 0.8814531548757171,
+  "patterns+analogs+similar": 0.8912173913043479
+ },
+ "verifier_report": {
+  "patterns": {
+   "n": 43799,
+   "positive_rate": 0.6695,
+   "oof_auc": 0.8218,
+   "oof_auc_raw_confidence": 0.6346
+  },
+  "patterns+analogs": {
+   "n": 86669,
+   "positive_rate": 0.7372,
+   "oof_auc": 0.7991,
+   "oof_auc_raw_confidence": 0.5712
+  },
+  "patterns+analogs+similar": {
+   "n": 108180,
+   "positive_rate": 0.7366,
+   "oof_auc": 0.7964,
+   "oof_auc_raw_confidence": 0.5585
+  }
+ }
+}

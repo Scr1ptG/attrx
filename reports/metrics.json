@@ -1,0 +1,20 @@
+{
+  "n_gold": 74812,
+  "n_pred": 43624,
+  "outside": 8509,
+  "tp": 36229,
+  "precision": 0.8305,
+  "recall": 0.4843,
+  "coverage": 0.5831,
+  "precision_accept": 0.9738,
+  "auto_fill": 0.0495,
+  "n_supported": 11931,
+  "recall_supported": 0.7003,
+  "f1": 0.6118,
+  "traffic_weighted_f1": 0.6297,
+  "ece": 0.0067,
+  "traffic_weighted_f1_ci": [
+    0.6190869434091366,
+    0.6424965862662485
+  ]
+}

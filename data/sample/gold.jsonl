@@ -1,0 +1,8 @@
+{"id": "s1", "category": "smartphone", "attributes": {"brand": "Samsung", "model": "Galaxy S24 Ultra", "storage": "256 ГБ", "screen_diagonal": "6.8", "battery_capacity": "5000 мАч", "color": "черный"}}
+{"id": "s2", "category": "smartphone", "attributes": {"brand": "Apple", "model": "iPhone 15", "storage": "128 ГБ", "screen_diagonal": "6.1", "battery_capacity": "3349", "color": "синий"}}
+{"id": "s3", "category": "smartphone", "attributes": {"brand": "Xiaomi", "model": "Redmi Note 13", "storage": "256 ГБ", "screen_diagonal": "6.67", "battery_capacity": "5000 мАч", "color": "синий"}}
+{"id": "s4", "category": "smartphone", "attributes": {"brand": "HONOR", "model": "X8b", "color": "черный"}}
+{"id": "s5", "category": "laptop", "attributes": {"brand": "ASUS", "cpu": "Intel Core i5-1235U", "ram": "16 ГБ", "storage": "512 ГБ", "screen_diagonal": "15.6", "color": "серебристый"}}
+{"id": "s6", "category": "laptop", "attributes": {"brand": "Lenovo", "cpu": "AMD Ryzen 5 7520U", "ram": "8 ГБ", "storage": "512 ГБ", "screen_diagonal": "15.6", "color": "серый"}}
+{"id": "s7", "category": "laptop", "attributes": {"brand": "Apple", "cpu": "Apple M2", "ram": "8 ГБ", "storage": "256 ГБ", "screen_diagonal": "13.6", "color": "черный"}}
+{"id": "s8", "attributes": {"brand": "Sony", "color": "черный"}}

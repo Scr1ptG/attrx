@@ -1,0 +1,90 @@
+# Схема обязательных атрибутов.
+# Стартовая версия собрана по описанию кейса (смартфон, ноутбук).
+# После получения датасета заменить списком обязательных полей от организаторов.
+#
+# Типы атрибутов:
+#   enum      — значение из справочника (configs/dictionaries/<dictionary>.yaml)
+#   quantity  — число с единицей измерения (unit_family: data | length_in | charge)
+#   pattern   — значение по регулярным выражениям (см. attrx/extractors/rules.py)
+#   text      — свободный текст (модель); правила дают слабый сигнал, основной источник — продавец и LLM
+#
+# traffic_weight — вес атрибута в метрике «с учётом трафика» (прокси: насколько часто по нему фильтруют).
+
+attributes:
+  brand:
+    title: Бренд
+    type: enum
+    dictionary: brands
+    traffic_weight: 1.0
+  model:
+    title: Модель
+    type: text
+    traffic_weight: 0.5
+  storage:
+    title: Объём встроенной памяти
+    type: quantity
+    unit_family: data
+    context: [встроен, памят, пзу, rom, накопител, ssd, hdd, emmc, ufs, хранилищ]
+    anti_context: [оперативн, озу, ram, lpddr, ddr]
+    traffic_weight: 0.9
+  ram:
+    title: Объём оперативной памяти
+    type: quantity
+    unit_family: data
+    context: [оперативн, озу, ram, lpddr, ddr]
+    anti_context: [встроен, пзу, rom, ssd, накопител, hdd, emmc, ufs]
+    traffic_weight: 0.8
+  screen_diagonal:
+    title: Диагональ экрана
+    type: quantity
+    unit_family: length_in
+    context: [диагонал, экран, дисплей, display, screen, матриц]
+    traffic_weight: 0.8
+  battery_capacity:
+    title: Ёмкость аккумулятора
+    type: quantity
+    unit_family: charge
+    context: [аккумулятор, батаре, battery, ёмкост, емкост]
+    traffic_weight: 0.5
+  color:
+    title: Цвет
+    type: enum
+    dictionary: colors
+    traffic_weight: 0.7
+  cpu:
+    title: Процессор
+    type: pattern
+    traffic_weight: 0.8
+
+categories:
+  smartphone:
+    title: Смартфон
+    keywords: [смартфон, телефон, smartphone, iphone]
+    attributes:
+      brand: {}
+      model: {}
+      storage: {range: [4, 2048]}
+      screen_diagonal: {range: [3, 8.5]}
+      battery_capacity: {range: [500, 20000]}
+      color: {}
+  laptop:
+    title: Ноутбук
+    keywords: [ноутбук, laptop, notebook, ультрабук, macbook]
+    attributes:
+      brand: {}
+      cpu: {}
+      ram: {range: [2, 256]}
+      storage: {range: [32, 16384]}
+      screen_diagonal: {range: [10, 19]}
+      color: {}
+
+# Синонимы ключей в атрибутах продавца (сравнение без регистра, по вхождению подстроки).
+seller_key_synonyms:
+  brand: [бренд, производитель, марка, brand, manufacturer, vendor]
+  model: [модель, model, серия модели]
+  storage: [встроенная память, объем встроенной памяти, объём встроенной памяти, пзу, rom, storage, накопитель, объем накопителя, объём накопителя, ssd]
+  ram: [оперативная память, объем оперативной памяти, объём оперативной памяти, озу, ram]
+  screen_diagonal: [диагональ, diagonal, размер экрана]
+  battery_capacity: [аккумулятор, ёмкость аккумулятора, емкость аккумулятора, батарея, battery]
+  color: [цвет, color, colour, цвет товара]
+  cpu: [процессор, cpu, модель процессора, processor]

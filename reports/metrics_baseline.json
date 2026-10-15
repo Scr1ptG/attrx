@@ -1,0 +1,70 @@
+{
+ "config": "baseline (lexicon v1)",
+ "data_snapshot": "2026-10-14",
+ "split": "group md5(seller|1P brand) 70/10/20",
+ "test_core": {
+  "n_gold": 74702,
+  "n_pred": 9882,
+  "outside": 1235,
+  "tp": 6482,
+  "precision": 0.6559,
+  "recall": 0.0868,
+  "coverage": 0.1323,
+  "precision_accept": 0.6693,
+  "auto_fill": 0.0482,
+  "n_supported": 11837,
+  "recall_supported": 0.5444,
+  "f1": 0.1533,
+  "traffic_weighted_f1": 0.1551,
+  "ece": 0.2064,
+  "ms_per_card": 4.2,
+  "cards": 1398,
+  "traffic_weighted_f1_ci": [
+   0.1499,
+   0.1607
+  ],
+  "precision_ci": [
+   0.6463,
+   0.6642
+  ]
+ },
+ "test_full": {
+  "n_gold": 471574,
+  "n_pred": 80082,
+  "outside": 18764,
+  "tp": 53595,
+  "precision": 0.6693,
+  "recall": 0.1137,
+  "coverage": 0.1698,
+  "precision_accept": 0.7225,
+  "auto_fill": 0.0784,
+  "n_supported": 102713,
+  "recall_supported": 0.5163,
+  "f1": 0.1943,
+  "traffic_weighted_f1": 0.17,
+  "ece": 0.1716,
+  "ms_per_card": 2.46,
+  "cards": 27107
+ },
+ "leakage_check": [
+  {
+   "разбиение": "групповое (продавец/бренд)",
+   "precision": 0.655940093098563,
+   "recall": 0.08677143851570239,
+   "f1": 0.15326775749550745
+  },
+  {
+   "разбиение": "случайное (sku)",
+   "precision": 0.6842681686615035,
+   "recall": 0.10048132703817303,
+   "f1": 0.17523088326622194
+  }
+ ],
+ "lexicon": {
+  "categories": 1093,
+  "slots": 21800,
+  "value_keys": 99501,
+  "brands": 4735,
+  "brands_dropped": 407
+ }
+}
